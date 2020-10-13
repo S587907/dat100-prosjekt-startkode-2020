@@ -27,8 +27,17 @@ public class GPSUtils {
 		double min;
 
 		// TODO - START
-
-		throw new UnsupportedOperationException(TODO.method());
+		
+		min = da[0];
+		
+		for (double d : da) {
+			if (d < min) {
+				min = d;
+			}
+		}
+		
+		return min;
+	//	throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUT
 
@@ -37,8 +46,15 @@ public class GPSUtils {
 	public static double[] getLatitudes(GPSPoint[] gpspoints) {
 
 		// TODO - START
+		double[] latitudes = new double[gpspoints.length];
+		int i = 0;
 		
-		throw new UnsupportedOperationException(TODO.method());
+		for (GPSPoint g: gpspoints) {
+			latitudes[i] = g.getLatitude();
+			i++;
+		}
+		return latitudes;
+		//throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - SLUTT
 	}
@@ -46,8 +62,15 @@ public class GPSUtils {
 	public static double[] getLongitudes(GPSPoint[] gpspoints) {
 
 		// TODO - START
-
-		throw new UnsupportedOperationException(TODO.method());
+		double[] longitudes = new double[gpspoints.length];
+		int i = 0;
+		
+		for (GPSPoint g: gpspoints) {
+			longitudes[i] = g.getLongitude();
+			i++;
+		}
+		return longitudes;
+		//throw new UnsupportedOperationException(TODO.method());
 		
 		// TODO - SLUTT
 
@@ -61,8 +84,22 @@ public class GPSUtils {
 		double latitude1, longitude1, latitude2, longitude2;
 
 		// TODO - START
-
-		throw new UnsupportedOperationException(TODO.method());
+		latitude1 = toRadians(gpspoint1.getLatitude());
+		latitude2 = toRadians(gpspoint2.getLatitude());
+		longitude1 = toRadians(gpspoint1.getLongitude());
+		longitude2 = toRadians(gpspoint2.getLongitude());
+		
+		double dLat = latitude2 - latitude1;
+		double dLon = longitude2 - longitude1;
+		
+		double a =  Math.pow(Math.sin(dLat / 2), 2) +  
+					Math.pow(Math.sin(dLon / 2), 2) *  
+					Math.cos(latitude1) *  	
+					Math.cos(latitude2); 
+		double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a));
+		return R * c;
+		
+		//throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUTT
 
