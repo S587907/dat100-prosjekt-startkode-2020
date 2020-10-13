@@ -11,8 +11,9 @@ public class GPSData {
 	public GPSData(int n) {
 
 		// TODO - START
-		
-		throw new UnsupportedOperationException(TODO.construtor("GPSData"));
+		this.gpspoints = new GPSPoint[n];
+		this.antall = 0;
+		//throw new UnsupportedOperationException(TODO.construtor("GPSData"));
 
 		// TODO - SLUTT
 	}
@@ -24,10 +25,29 @@ public class GPSData {
 	protected boolean insertGPS(GPSPoint gpspoint) {
 
 		boolean inserted = false;
-
 		// TODO - START
 		
-		throw new UnsupportedOperationException(TODO.method());
+//		GPSPoint[] temp = new GPSPoint[gpspoints.length];
+//		
+//		for(int i = 0; i < gpspoints.length; i++){
+//			temp[i] = gpspoints[i];
+//			inserted = true;
+//		}
+//		temp[temp.length] = gpspoint;
+//		
+//		return inserted;
+		
+
+		for ( antall = 0; antall < gpspoints.length; antall++) {
+			for (int i = 0 ; i < gpspoints.length; i++) {
+			gpspoint = gpspoints[i];
+			
+			
+		}	
+			
+		}
+		return inserted;
+		//throw new UnsupportedOperationException(TODO.method());
 
 		// TODO - SLUTT
 	}
