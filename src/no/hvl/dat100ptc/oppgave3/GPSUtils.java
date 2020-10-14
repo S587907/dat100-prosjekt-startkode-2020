@@ -109,11 +109,17 @@ public class GPSUtils {
 
 		int secs;
 		double speed;
-
+		double avstand = distance(gpspoint1, gpspoint2);
+		
 		// TODO - START
-
-		throw new UnsupportedOperationException(TODO.method());
-
+		int time1 = gpspoint1.getTime();
+		int time2 = gpspoint2.getTime();
+		
+		secs = time1 + time2;
+		
+		speed = (avstand/secs) * 3.6;
+		//throw new UnsupportedOperationException(TODO.method());
+		return speed;
 		// TODO - SLUTT
 
 	}

@@ -10,12 +10,12 @@ public class GPSPoint {
 	// TODO - objektvariable
 		
 	public GPSPoint(int time, double latitude, double longitude, double elevation) {
+		
+		// TODO - konstruktur
 		this.time = time;
 		this.latitude = latitude;
 		this.longitude = longitude;
 		this.elevation = elevation;
-		// TODO - konstruktur
-
 		//throw new UnsupportedOperationException(TODO.construtor("GPSPoint"));
 
 	}
@@ -71,11 +71,8 @@ public class GPSPoint {
 	
 	public String toString() {
 		
-		String str = time + " " + "(" + latitude + "," + longitude + ")" + " " + elevation + "\n";
-		
-		
-
 		// TODO - start
+		String str = time + " " + "(" + latitude + "," + longitude + ")" + " " + elevation + "\n";
 		return str;
 		//throw new UnsupportedOperationException(TODO.method());
 

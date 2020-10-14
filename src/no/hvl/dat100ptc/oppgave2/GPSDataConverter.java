@@ -22,7 +22,7 @@ public class GPSDataConverter {
 
 		hr = Integer.parseInt(timestr.substring(11, 13)) * 60 * 60 ;
 		min = Integer.parseInt(timestr.substring(14, 16)) * 60 ;
-		sec = Integer.parseInt(timestr.substring(17, 19)) + 0;
+		sec = Integer.parseInt(timestr.substring(17, 19)) ;
 		secs = hr + min + sec;
 		
 		return secs;
@@ -31,11 +31,9 @@ public class GPSDataConverter {
 		// OPPGAVE - SLUTT
 		
 	}
-
+	
 	public static GPSPoint convert(String timeStr, String latitudeStr, String longitudeStr, String elevationStr) {
 
-		
-		
 		// TODO - START ;
 		return new GPSPoint(toSeconds(timeStr), Double.parseDouble(latitudeStr), Double.parseDouble(longitudeStr), Double.parseDouble(elevationStr));
 		
